@@ -1,0 +1,122 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+   height: 100vh;
+}
+
+.title {
+   position: relative;
+   top: 25px;
+   color: rgb(0, 16, 58);
+   text-align: center;
+   height: 100px;
+}
+
+.calc {
+   display: grid;
+   gap: 8px;
+   grid-template:
+      "label label label label"
+      "reset cheon divided time"
+      "seven eight nine minus"
+      "four five six plus"
+      "one two three equal"
+      "zero_ zero_ dot_ equal";
+   position: relative;
+   height: 400px;
+   margin: auto;
+   width: 250px;
+}
+
+.calc-btn::selection {
+   color: white;
+}
+
+.calc-btn {
+   outline: none;
+   color: #fff;
+   font-size: 18px;
+   background: rgb(136, 136, 136);
+   border: none;
+   border-radius: 8px;
+}
+.queue,
+.label {
+   height: 1em;
+   font-size: 32px;
+}
+.queue {
+   opacity: 0.5;
+}
+.calc-label {
+   border-radius: 8px;
+   padding: 0 12px;
+   display: flex;
+   text-align: end;
+   flex-direction: column;
+   justify-content: space-between;
+   background: #fff;
+   color: #000;
+   grid-area: label;
+}
+.calc-btn-1 {
+   grid-area: one;
+}
+.calc-btn-2 {
+   grid-area: two;
+}
+.calc-btn-3 {
+   grid-area: three;
+}
+.calc-btn-4 {
+   grid-area: four;
+}
+.calc-btn-5 {
+   grid-area: five;
+}
+.calc-btn-6 {
+   grid-area: six;
+}
+.calc-btn-7 {
+   grid-area: seven;
+}
+.calc-btn-eig8ht {
+   grid-area: eight;
+}
+.calc-btn-9 {
+   grid-area: nine;
+}
+.calc-btn-0 {
+   grid-area: zero_;
+}
+.calc-btn-dot {
+   grid-area: dot_;
+}
+.calc-btn-plus {
+   grid-area: plus;
+}
+.calc-btn-minus {
+   grid-area: minus;
+}
+.calc-btn-equal {
+   grid-area: equal;
+}
+.calc-btn-reset {
+   grid-area: reset;
+}
+.calc-btn-chevron {
+   grid-area: cheon;
+}
+
+.disable-btn {
+   opacity: 0.3;
+   pointer-events: none;
+   border: 2px solid #ff0000;
+   color: #000;
+   background: rgb(255, 255, 255);
+}
