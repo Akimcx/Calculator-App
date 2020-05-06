@@ -4,10 +4,15 @@ const calculator = document.getElementById("calc")
 const operators = document.querySelectorAll(".calc-btn-operator")
 const resultCss = document.querySelector(".result");
 const operationCss = document.querySelector(".operation");
+const letter = /[a-z]/
 let result = resultCss.innerText
 let operation = operationCss.innerText
 
-document.addEventListener("keypress", e => {
+document.addEventListener("keyup", e => {
+  
+  console.log(e.key, letter.test(e.key))
+  if(letter.test(e.key) && e.key !== "Backspace" && e.key !== "Enter") return
+
   handleEvent(e.key)
 })
 
@@ -28,11 +33,13 @@ function handleEvent(text) {
   if(text === "C"){
     result = ""
     operation = ""
+    show()
     return
   }
 
-  if(text === "<"){
+  if(text === "<"|| text === "Backspace"){
     result = result.replace(result.charAt(result.length - 1), "")
+    show()
     return
   }
 
